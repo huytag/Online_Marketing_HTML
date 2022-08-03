@@ -1,0 +1,13 @@
+$text-primary-color-gray:#635F85;
+$text-primary-color:#F5830B;
+:root {
+    --section-spacing: 140px;
+    --section-spacing2: 80px;
+}
+
+@media screen and (max-width: 1023.98px) {
+    :root {
+        --section-spacing: 50px;
+        --section-spacing2: 20px;
+    }
+}

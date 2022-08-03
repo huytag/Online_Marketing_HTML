@@ -1,0 +1,115 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  // max-width: 1440px;
+}
+
+.container-header {
+  max-width: 1120.93px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-media {
+  position: relative;
+  padding: 6px 18px;
+  margin-right: 10px;
+  background: #049eff;
+  border-radius: 50%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.txt__title {
+  color: #051441;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 56px;
+  &_sm {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.16em;
+    color: #ff7d00;
+  }
+}
+
+.txt__desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $text-primary-color-gray;
+  &.txt__desc--primary {
+    color: $text-primary-color;
+  }
+}
+
+.btn {
+  padding: 15px 34px;
+  border: 2px solid #e7e7e7;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s ease-in;
+  &-play {
+    background: #ffffff;
+    box-shadow: 0px 17px 25px rgba(140, 141, 146, 0.12);
+    padding: 22px;
+    border-radius: 50%;
+  }
+  &.btn--gray {
+    color: $text-primary-color;
+    &:hover {
+      color: white;
+      background: linear-gradient(103.38deg, #f67102 5.1%, #f4a91e 86.29%);
+      cursor: pointer;
+    }
+  }
+  &.btn--primary {
+    background: linear-gradient(103.38deg, #f67102 5.1%, #f4a91e 86.29%);
+    color: white;
+    &:hover {
+      cursor: pointer;
+      color: $text-primary-color-gray;
+      background: transparent;
+      border: 2px solid #e7e7e7;
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .mb {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .mb {
+    display: block;
+  }
+}

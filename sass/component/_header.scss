@@ -1,0 +1,124 @@
+.header {
+  margin-bottom: var(--section-spacing);
+  & .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  margin-top: 30px;
+  &_menu {
+    display: flex;
+    gap: 0 38px;
+    li {
+      a {
+        text-decoration: none;
+        color: $text-primary-color-gray;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        transition: 0.3s linear;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 2px;
+          background: $text-primary-color;
+          bottom: -5px;
+          left: 0;
+          transition: all 0.3s linear;
+        }
+        &:hover {
+          color: $text-primary-color;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__group {
+    display: flex;
+    gap: 0 15px;
+  }
+  .btn-hamberger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transition: all 0.5s linear;
+    &.is-active {
+      .line {
+        &.line1 {
+          transform: translateX(-50%) translate3d(0, 0, 0) rotate(-405deg);
+        }
+        &.line2 {
+          transform: scale(0);
+        }
+        &.line3 {
+          transform: translateX(-50%) translate3d(0, 0, 0) rotate(225deg);
+        }
+      }
+    }
+    .line {
+      width: 25px;
+      height: 3px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #596778;
+      margin-left: -12.5;
+      margin-top: -1.5px;
+      // transform: translateX(-50%);
+      transition: transform 0.7s;
+      &.line1 {
+        transform: translateX(-50%) translate3d(0, -8px, 0);
+      }
+      &.line2 {
+        transform: translateX(-50%) translate3d(0, 0, 0);
+      }
+      &.line3 {
+        transform: translateX(-50%) translate3d(0, 8px, 0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .header {
+    margin-top: 0px;
+    .btn-hamberger {
+      display: block;
+      z-index: 110;
+    }
+    &__group {
+      display: none;
+    }
+    &_menu {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+      width: 300px;
+      z-index: 100;
+      flex-direction: column;
+      padding-top: 40px;
+      align-items: stretch;
+      transform: translateX(100%);
+      will-change: transform;
+      transition: all 0.5s ease-out;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      &.is-active {
+        transform: translateX(0);
+      }
+      &-item {
+        &:nth-child(1) {
+          margin-top: 50px;
+        }
+        padding: 15px;
+      }
+    }
+  }
+}

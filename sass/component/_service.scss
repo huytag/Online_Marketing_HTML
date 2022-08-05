@@ -1,0 +1,108 @@
+.service-sc {
+}
+.service {
+  padding: 0 20px;
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-bottom: var(--section-spacing2);
+  &-header {
+    text-align: center;
+    margin-bottom: 70px;
+    span {
+      display: block;
+      margin-bottom: 25px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      width: 426px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3,  minmax(0, 1fr));
+    grid-gap: 0 33px;
+    .service-item {
+      background: #ffffff;
+      border: 2px solid #edeff7;
+      border-radius: 13px;
+      padding: 40px 45px;
+      &:nth-child(2) {
+        background: #ffffff;
+        box-shadow: 0px 24px 60px rgba(94, 122, 148, 0.1);
+        border: none;
+      }
+      .service-icon {
+        text-align: center;
+        margin-bottom: 26px;
+        img {
+          width: 67px;
+          height: 67px;
+        }
+      }
+      .txt__title {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 32px;
+        text-align: center;
+        color: #051441;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .service {
+    &-header {
+      text-align: center;
+      margin-bottom: 20px;
+      span {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      p {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    &-list {
+      grid-template-columns: 1fr;
+      grid-gap: 20px 0;
+      .service-item {
+        padding: 30px 35px;
+        &:nth-child(2) {
+          background: #ffffff;
+          box-shadow: 0px 24px 60px rgba(94, 122, 148, 0.1);
+          border: none;
+        }
+        .service-icon {
+          margin-bottom: 20px;
+        }
+        .txt__title {
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

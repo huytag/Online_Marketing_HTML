@@ -1,0 +1,113 @@
+.newsletter-sc {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.newsletter {
+  background: #f4f6fd;
+  border-radius: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  padding: 77px 170px 110px 160px;
+  &-text {
+    max-width: 404px;
+    .txt__title {
+      margin-bottom: 25px;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 58px;
+    }
+    .txt__desc {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      opacity: 0.8;
+      color: #787e86;
+    }
+  }
+  .input-group {
+    position: relative;
+    width: 50%;
+    input {
+      position: absolute;
+      width: 100%;
+      border-radius: 26px;
+      background: #ffffff;
+      padding: 15px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+      
+      &:focus {
+        outline: none;
+      }
+    }
+    a {
+      border: none;
+      border-radius: 26px;
+      padding: 15px 30px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      position: absolute;
+      top: 0;
+      right: -45px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .newsletter-sc {
+    padding: 20px;
+  }
+  .newsletter {
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 30px 30px 80px 30px;
+    border-radius: 20px;
+    &-text {
+      max-width: 100%;
+      .txt__title {
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 22px;
+      }
+      .txt__desc {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    .input-group {
+      position: relative;
+      width: 80%;
+      display: flex;
+      input {
+        position: absolute;
+        border-radius: 26px;
+        background: #ffffff;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      a {
+        border: none;
+        border-radius: 26px;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        position: absolute;
+        top: 0;
+        right: -45px;
+      }
+    }
+  }
+}
